@@ -158,3 +158,58 @@ nav a:active {
   display: inline-block;
   
 }
+/* Fixed Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 50px; /* adjust depending on nav height */
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+/* Scroll-Zoom Sections */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevent default scrolling */
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s ease, opacity 1s ease, z-index 0s linear 0s;
+  padding-top: 120px; /* space for nav + header */
+}
+
+#section1 {
+  z-index: 2; /* Initially at the top */
+}
+
+#section2 {
+  position: relative;
+  background: #d0e0f0;
+  transform: scale(0.5);
+  opacity: 0;          /* hidden initially */
+  z-index: 1;          /* initially behind section1 */
+  flex-direction: column;
+  padding: 50px;
+}
