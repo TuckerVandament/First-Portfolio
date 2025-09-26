@@ -176,7 +176,7 @@ header {
 }
 
 /* Scroll-Zoom Sections */
-body, html {
+.index {
   margin: 0;
   padding: 0;
   overflow: hidden; /* prevent default scrolling */
